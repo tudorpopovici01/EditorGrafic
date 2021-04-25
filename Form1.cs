@@ -61,9 +61,8 @@ namespace EditorGrafic
 
         private void button8_Click(object sender, EventArgs e)
         {
-            mode = "Oval";
-            
-            
+            mode = "Oval";          
+       
         }
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
@@ -105,7 +104,7 @@ namespace EditorGrafic
             g1 = Graphics.FromImage(pic1);
             if (e.Button == MouseButtons.Left)
             {
-                g.DrawLine(p, x1, y1, e.X, e.Y);
+              //  g.DrawLine(p, x1, y1, e.X, e.Y);
 
 
 
@@ -115,13 +114,13 @@ namespace EditorGrafic
                 }
                 if (mode == "Pătrat")
                 {
-                    g1.Clear(Color.White);
-                    g1.DrawRectangle(p, xclick1, yclick1, e.X - xclick1, e.Y - yclick1);
+                    //g1.Clear(Color.White);
+                    g.DrawRectangle(p, xclick1, yclick1, e.X - xclick1, e.Y - yclick1);
                 }
                 if (mode == "Oval")
                 {
-                    g1.Clear(Color.White);
-                    g1.DrawEllipse(p, xclick1, yclick1, e.X - xclick1, e.Y - yclick1);
+                   // g1.Clear(Color.White);
+                    g.DrawEllipse(p, xclick1, yclick1, e.X - xclick1, e.Y - yclick1);
                 }
                 g.DrawImage(pic1, 0, 0);
 
